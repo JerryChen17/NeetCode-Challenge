@@ -1,0 +1,33 @@
+Valid Palindrome
+set L point (index = 0) and R point (index = len(dataset) - 1) then iterating through the dataset (usually are iterating towards middle from both ends).
+use while loop to iterate through it by (L + 1, R - 1) once L crosses R (L > R) stop the while loop.
+
+bonus:
+check the alphabet using number representation of characters in ascii code.  ord("A") <= ord(character) <= ord("Z")
+
+
+
+s = get rid of na
+        set two points [l, r]
+        iterating through s
+        l, r
+        l +1, r-1
+        until the middle of s (when l passes r, or vice    versa)
+        """
+        [l , r] = [0, len(s)-1]
+        while l < r:
+            while l < r and not self.check_alpha(s[l]):
+                l += 1
+            while l < r and  not self.check_alpha(s[r]):
+                r -= 1
+            if s[l].lower() != s[r].lower():
+                return False
+            l += 1
+            r -= 1
+        return True
+
+    def  check_alpha(self, character):
+        return(ord("A") <= ord(character) <= ord("Z") or ord("a") <= ord(character) <= ord("z") or ord("0") <= ord(character) <= ord("9"))
+
+
+

@@ -1,0 +1,59 @@
+Valid Parentheses
+If the logic is built correctly, the code would be rather simple, yet the logic behind it is often complicated.
+
+using the negative statement could often simplify the code.
+
+if we want to pair object to each other we could use hash map, e.g., { to }, ( to )...
+
+use stack with LIFO.
+
+
+code simpilified:
+
+1. 
+ if len(empStack) == 0:
+            return True
+        else:
+            return False
+
+could be just:
+
+return not empStack
+
+#because nonzero is True and the default value of empStack is its length.
+
+2.
+ if s[i] in symbolMap:
+    if len(empStack) > 0:
+             if empStack[-1] == symbolMap[s[i]]:
+                 empStack.pop()
+                 continue
+             else:
+                 return False
+         else:
+             return False
+      else:
+         empStack.append(s[i])
+could be just:
+if s[i] in symbolMap:
+	if empStack or empStack[-1] == symbolMap[s[i]]:
+		empStack.pop()
+		continue
+	else:
+		return False
+else:
+	empStack.append(s[i])
+	
+
+	could be simplified even more as:
+
+
+
+	if s[i] not in symbolMap:
+		empStack.append(s[i])
+		continue
+	if not empStack or empStack[-1] != symbolMap[s[i]]:
+		return False
+	empStack.pop()
+		
+

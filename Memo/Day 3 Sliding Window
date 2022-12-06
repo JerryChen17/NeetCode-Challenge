@@ -1,0 +1,3 @@
+Best Time to Buy and Sell Stock
+use the L and R point to keep track of the wanted value (lowest stock price in this case). Once the R point gets a new lowest price, replace the L point with it. And while iterating through the dataset, keep tracking the maximum value.
+

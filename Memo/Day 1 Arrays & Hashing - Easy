@@ -1,0 +1,16 @@
+Find repeated object as iterating through the list
+
+The key to use hashing is to find a proper “key” and “value” so as the given array is being iterated through, it would save the value and find the key to complete the task successfully.
+
+ Contains Duplicate (learn how to use hashmap)
+use hash to store value and use “if keys in dict” to check existing keys.
+
+Anagram (learn how to use proper value in hashmap)
+in hash map the key is the character and value is the number of time it appeared
+
+Two Sum (learn how to use proper key and value in hashmap)
+In a hash map, the key is the number and the value is the index of that number.
+“diff = target - n “ is very important in this practice.
+for example:
+	nums = [1, 4, 3] 
+hashMap = {1:0, 4:1, 3:2}
