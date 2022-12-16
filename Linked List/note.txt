@@ -1,0 +1,8 @@
+use dummy to start an data structure
+dummy -> inst -> tail -> tail.next
+dummy, and tail.
+
+as the linked list use being added, dummy would still be the head of the list
+
+use temp to preserve the curr.next 
+
